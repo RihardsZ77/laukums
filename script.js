@@ -1,8 +1,8 @@
 function nolasa(m1,m2,m3){
       const malas = document.getElementsByClassName("mala");
      m1= parseFloat(mala1.value);
-     m1= parseFloat(mala2.value);
-     m1= parseFloat(mala3.value);
+     m2= parseFloat(mala2.value);
+     m3= parseFloat(mala3.value);
     if(m1>0&& m2>0&&m3>0){
         console.log({m1,m2,m3});
         return {m1,m2,m3};
@@ -12,3 +12,40 @@ function nolasa(m1,m2,m3){
     }
 
     }
+
+    function perimetrs(m1,m2,m3,) {
+        const m=nolasa();
+        m1=m.m1;m2=m.m2;m3=m.m3;
+        console.log(m1,m2,m3);
+        const p = m1+m2+m3;
+        console.log(p);
+        return(p);
+    }
+    
+    function pusper(m1,m2,m3) {
+        const pusper= perimetrs(m1,m2,m3)/2;
+        console.log(pusper);
+        return(pusper);
+  
+    }
+
+    function laukums(m1,m2,m3){
+        const pusper = perimetrs(m1,m2,m3)/2;
+        let trijstlaukums = Math.sqrt(
+            pusper* ((pusper - 1)*(pusper-2)*(pusper-3)));
+            console.log(trijstlaukums);
+            return trijstlaukums;
+        
+    }
+
+    function irTrijsturis(m1,m2,m3){
+        //pārbauda vai izpildās trijstūra nevienādība
+        //atgriež true vai false
+        if(m1<m2+m3&&m2<m1+m3&&m3<m1+m2) {
+            return true;
+        }else{
+            return false;
+        }
+            
+        }
+    
